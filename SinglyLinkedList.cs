@@ -40,4 +40,14 @@ public class SinglyLinkedList
         }
         return 0;
     }
+
+    public void PrintValues()
+    {
+        var runner = this.Head;
+        while(runner != null)
+        {
+            Console.WriteLine($"Node Value: {runner.Value}");
+            runner = runner.Next;
+        }
+    }
 }

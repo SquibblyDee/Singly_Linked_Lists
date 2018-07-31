@@ -12,9 +12,10 @@ namespace Singly_Linked_Lists
             list1.Add(7);
             list1.Add(9);
             list1.Add(11);
-            Console.WriteLine(list1);
-            Console.WriteLine(list1.Remove());
-            Console.WriteLine(list1);
+            list1.PrintValues();
+            Console.WriteLine($"Removed Node's value: {list1.Remove()}");
+            list1.PrintValues();
+            
         }
     }
 }
