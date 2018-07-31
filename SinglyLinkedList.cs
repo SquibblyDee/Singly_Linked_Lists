@@ -18,7 +18,8 @@ public class SinglyLinkedList
         else
         {
             SllNode runner = Head;
-            while(runner.Next != null) {
+            while(runner.Next != null) 
+            {
                 runner = runner.Next;
             }
             runner.Next = newNode;
@@ -30,6 +31,10 @@ public class SinglyLinkedList
         var runner = this.Head;
         while(runner != null)
         {
+            if(runner.Next == null)
+            {
+                return runner.Value;
+            }
             if(runner.Next.Next == null)
             {
                 int returnValue = runner.Next.Value;
