@@ -29,12 +29,19 @@ public class SinglyLinkedList
     public int Remove()
     {
         var runner = this.Head;
+        ////This handles an empty list
+        if(this.Head == null)
+        {
+            return 0;
+        }
         while(runner != null)
         {
+            ////This handles if our List only has one node
             if(runner.Next == null)
             {
                 return runner.Value;
             }
+            ////This handles any other amount of nodes
             if(runner.Next.Next == null)
             {
                 int returnValue = runner.Next.Value;
