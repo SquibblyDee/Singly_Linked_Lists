@@ -34,21 +34,26 @@ public class SinglyLinkedList
         {
             return 0;
         }
-        while(runner != null)
+        ////This handles if our List only has one node
+        if(runner.Next == null)
         {
-            ////This handles if our List only has one node
-            if(runner.Next == null)
+            int returnValue = runner.Value;
+            this.Head = null;
+            return runner.Value;
+        }
+        else
+        {
+            while(runner != null)
             {
-                return runner.Value;
+                ////This handles any other amount of nodes
+                if(runner.Next.Next == null)
+                {
+                    int returnValue = runner.Next.Value;
+                    runner.Next = null;
+                    return returnValue;
+                }
+                runner = runner.Next;
             }
-            ////This handles any other amount of nodes
-            if(runner.Next.Next == null)
-            {
-                int returnValue = runner.Next.Value;
-                runner.Next = null;
-                return returnValue;
-            }
-            runner = runner.Next;
         }
         return 0;
     }
