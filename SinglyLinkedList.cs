@@ -45,7 +45,8 @@ public class SinglyLinkedList
         {
             while(runner != null)
             {
-                ////This handles any other amount of nodes
+                ////This jumps sets us forward one node so we can grab it's value
+                ////and set the .Next from our previous node to null.
                 if(runner.Next.Next == null)
                 {
                     int returnValue = runner.Next.Value;
